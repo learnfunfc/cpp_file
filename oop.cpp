@@ -39,6 +39,16 @@ int main(){
 	}
 	
 	
+	for(j=0;j<x;j++){
+		for(k=0;k<y;k++){
+			for(i=0;i<t;i++){
+				if (abs(risk[i][0]-j)+abs(risk[i][1]-k)+risk[i][2]<map[j][k]){
+					map[j][k]=abs(risk[i][0]-j)+abs(risk[i][1]-k)+risk[i][2];
+				}
+			} 
+		}
+	}
+	
 	for(i=0;i<x;i++){
 		for(k=0;k<y;k++){
 			cout<<map[i][k];
